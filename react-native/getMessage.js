@@ -1,8 +1,6 @@
 ...
 
 componentWillMount() {
-  this.pubnub.init(this);
-
   this.pubnub.getMessage('channel1');
 
   ...

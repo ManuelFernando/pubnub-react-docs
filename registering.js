@@ -1,8 +1,3 @@
-...
-
-componentWillMount() {
-  this.pubnub.init(this);
-
   this.pubnub.getStatus();
 
   this.pubnub.getMessage('channel1');
@@ -11,8 +6,3 @@ componentWillMount() {
 
   this.pubnub.getPresence('channel1');
   this.pubnub.getPresence('channel2');
-
-  ...
-}
-
-...

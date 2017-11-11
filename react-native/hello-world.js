@@ -5,11 +5,10 @@ export default class extends Component {
   constructor(props) {
     super(props);
     this.pubnub = new PubNubReact({ publishKey: 'YOUR PUBLISH KEY', subscribeKey: 'YOUR SUBSCRIBE KEY' });
+    this.pubnub.init(this);
   }
 
   componentWillMount() {
-    this.pubnub.init(this);
-
     this.pubnub.subscribe({ channels: ['channel1'], withPresence: true });
 
     this.pubnub.getMessage('channel1', (msg) => {
